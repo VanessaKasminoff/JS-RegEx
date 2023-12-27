@@ -14,7 +14,7 @@ email: lsouza@gmail.com
 animals: Dog, cat
 bio: Cat ipsum dolor sit amet, exercitationem incididunt. Laborum consequuntur, error velitesse incidunt. Nostrud fugit eu, anim. Sint qui but exercitationem iure yet nesciunt. Occaecat do so ut yet nihil. Fugiat fugiat but voluptatem or velit, for aut. 
 status: Approved 
-`
+`;
 
 /* 
 
@@ -24,14 +24,16 @@ Regular Expression 1: Phone Number
 numbers if there are more than one
 
 - Hint for regex: Is there a shortcut for digits? What quantifier allows you to specify the exact amount of times to match a character? What modifier finds all matches instead of just the first?
-- Hint for testing: What JavaScript method saves matches into an array? 
+- Hint for testing: What JavaScript method saves matches into an array?
 
 Expected Output: 
 ["555-123-4567", "555-567-8910"]
 
 */ 
  
-let phoneReg = /write your regex here/
+let phoneReg = /(\d{3})-(\d{3})-(\d{4})/g;
+let phoneResults = sampleApp.match(phoneReg)
+console.log(phoneResults);
 
 /* 
 
@@ -50,9 +52,9 @@ Expected Output:
 - Note: Your terminal might also display the index, input, and groups of the match. If so, that's okay!
 
 */ 
-
-let emailReg = /write your regex here/
-
+let emailReg = /\w+@[a-zA-Z]+\.[a-zA-Z]+/;
+let emailResult = sampleApp.match(emailReg);
+console.log(emailResult);
 /* 
 
 Regular Expression 3: 
@@ -67,4 +69,6 @@ Expected Output:
 
 */ 
 
-let statusReg = /write your regex here/
+let statusReg = /status:/i;
+let statusResult = sampleApp.search(statusReg);
+console.log(statusResult);
